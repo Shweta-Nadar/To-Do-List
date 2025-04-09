@@ -1,0 +1,307 @@
+body {
+    background: linear-gradient( #f3f1ec 0%, #facd89 100%);
+    background-attachment: fixed;
+  }
+.heading h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.input_box::placeholder {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    
+    color: gray;
+}
+.streak-counter{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    /* text-align: center; */
+    /* padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px; */
+    
+}
+.addbut {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: visible; /* Removes forced scrolling */
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    word-break: break-word; /* Prevents text overflow */
+    max-width: 100%;
+}
+
+ul li::before {
+    content: "";
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0; /* Ensures the checkbox doesn't shrink */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D3D3D3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3C/svg%3E");
+}
+
+ul li.checked::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D3D3D3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M7 12l4 4 6-6' stroke='%23000000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+ul li span {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background-color: rgb(238, 234, 234);
+}
+/* Scrollbar styles */
+.scroll {
+    height: 15rem;
+    scrollbar-width: thin;
+    overflow-y: auto; /* Enable scrolling */
+}
+
+.scroll::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background-color: black;
+}
+
+.scroll::-webkit-scrollbar-track {
+    display: none;
+}
+
+.footer{
+    border: 0.06rem solid black;
+}
+.lower p{
+    align-self: center;
+}
+.lower{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;
+    height: 2rem;
+    color: black;
+}
+
+input_section[type="checkbox"]::before{
+    content:"\2713";
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.7rem;
+    text-align: center;
+    border: 0.06rem solid black;
+    border-radius: 50%;
+    color: transparent;
+}
+input_section[type="checkbox"]::before::after{
+    color: white;
+    background-color: black;
+    border: 0.06rem solid black;
+    border-radius: 50%;
+
+}
+.input_section{
+    position: relative;
+    display: flex;
+}
+.input_box {
+    width: 100%; /* Now fully responsive */
+    border-radius: 0.5rem;
+    padding: 1rem; /* Fixed spacing */
+    font-size: 1rem;
+    border: 0.06rem solid rgb(236, 236, 236);
+    box-sizing: border-box; /* Prevents overflow issues */
+}
+.todolist_rightside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 2rem;
+    background-color: aliceblue;
+    padding: 3rem;
+    width: 70%;
+    box-shadow: 0 1rem 3rem 1rem rgba(0, 23, 71, 0.15);
+    min-height: 220px; /* Minimum height */
+    height: auto; /* Allows the box to expand */
+    max-height: 80vh; /* Prevents it from growing too much */
+    overflow: hidden; /* Prevents unnecessary scrolling */
+    transition: height 0.3s ease-in-out;
+}
+.addbut{
+    padding: 0.7rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 0.3rem; 
+    border: none;
+    background:  black;
+    color: orange;
+    cursor: pointer;
+}
+.input_section{
+    display: flex;
+    flex-direction: row;
+}
+.big_container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start; 
+    width: 90%;
+    max-width: 800px; 
+}
+body {
+    background-color: rgb(241, 236, 228);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    height: 100vh; 
+    font-family: 'quicksand';
+}
+
+.todolist_leftside {
+    text-align: center; 
+    margin-bottom: 2rem;
+    padding-top: 0% ;
+}
+
+span {
+    color: orange;
+}
+
+.todolist_leftside h1 {
+    font-size: 4vw;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+.todolist_leftside h3 {
+    font-size: 2.5vw;
+    margin: 0;
+    padding: 0;
+}
+.textdecor span {
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 2.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+
+
+.textdecor span::after {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background-color: orange;
+    margin-left: 5px;
+    animation: cursorBlink 0.6s infinite;
+}
+
+@keyframes cursorBlink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes typing {
+    0%, 15% {
+        content: "revise linked lists today.";
+    }
+    21%, 35% {
+        content: "binge best Run BTS eps.";
+    }
+    41%, 55% {
+        content: "try a new hairstyle today.";
+    }
+    61%, 75% {
+        content: "listen to a BTS song and relax.";
+    }
+    81%, 95% {
+        content: "drink at least 2L of water today.";
+    }
+}
+
+.textdecor span::before {
+    content: "revise linked lists today.";
+    animation: typing 20s steps(30) infinite;
+}
+
+@media (max-width: 768px) {
+    .todolist_leftside {
+        margin-top: 3vh;
+    }
+    
+    .todolist_leftside h1 {
+        font-size: 8vw;
+    }
+
+    .todolist_leftside h3 {
+        font-size: 4vw;
+    }
+
+    .textdecor span {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .todolist_leftside h1 {
+        font-size: 9vw;
+    }
+
+    .todolist_leftside h3 {
+        font-size: 5vw;
+    }
+
+    .textdecor span {
+        font-size: 1.8rem;
+    }
+}
+.addbut {
+    transition: transform 0.2s ease, background-color 0.3s;
+  }
+  
+  .addbut:hover {
+    transform: scale(1.05);
+    background-color: #f9bc61;
+    color: black;
+  }
+  
