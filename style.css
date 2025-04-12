@@ -219,37 +219,5 @@ span {
 
 .textdecor span::before {
     content: "revise linked lists today.";
-    animation: typing 20s steps(30) infinite;
-}
-
-@media (max-width: 768px) {
-    .todolist_leftside {
-        margin-top: 3vh;
-    }
-    
-    .todolist_leftside h1 {
-        font-size: 8vw;
-    }
-
-    .todolist_leftside h3 {
-        font-size: 4vw;
-    }
-
-    .textdecor span {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .todolist_leftside h1 {
-        font-size: 9vw;
-    }
-
-    .todolist_leftside h3 {
-        font-size: 5vw;
-    }
-
-    .textdecor span {
-        font-size: 1.8rem;
-    }
+    animation: typing 20s infinite;
 }
